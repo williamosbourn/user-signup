@@ -14,11 +14,15 @@ def index():
 
 @app.route("/signup", methods= ['POST'])
 def signup():
-    username = request.form['username']
-    password = request.form['password']
-    verify_password = request.form['verify_password']
-    email = request.form['email']
-    
+  username = request.form['username']
+  password = request.form['password']
+  verify_password = request.form['verify_password']
+  email = request.form['email']
+
+  # if (not new_movie) or (new_movie.strip() == ""):
+  #   error = "Please specify the movie you want to add."
+  #   return redirect("/?error=" + error)  
+
 
 
 
