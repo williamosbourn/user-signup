@@ -17,11 +17,11 @@ def signup():
   username = request.form['username']
   password = request.form['password']
   verify_password = request.form['verify_password']
-  email = request.form['email']
+  email = request.form['emailaddress']
 
-  # if (not new_movie) or (new_movie.strip() == ""):
-  #   error = "Please specify the movie you want to add."
-  #   return redirect("/?error=" + error)  
+  if (not username) or (username.strip() == ""):
+    error = "That's not a valid username."
+    return redirect("/?error=" + error)  
 
 
 
