@@ -1,25 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <form method = 'POST'>
+    <form method = 'post'>
       <table>
         <tbody>
           <tr>
             <td>
-              <label for='username'>Username</label>
+              <label for='u_name'>Username</label>
             </td>
             <td>
-              <input name='username' type='text' value='{{username}}'>
-              <span class='error'></span>
+              <input name='u_name' type='username' value='{{username}}'>
+              <span class='error'>{{u_error}}</span>
             </td>
           </tr>
           <tr>
             <td>
-              <label for='password'>Password</label>
+              <label for='p_word'>Password</label>
                 </td>  
             <td>
-              <input name='password' type='password' value=''>
-              <span class='error'></span>
+              <input name='p_word' type='password' value=''>
+              <span class='error'>{{p_error}}</span>
             </td> 
           </tr>
           <tr>
@@ -28,7 +28,7 @@
             </td>
             <td>
               <input name='verify' type='password' value=''>
-              <span class='error'></span>
+              <span class='error'>{{v_pass_error}}</span>
             </td>
           </tr>
           <tr>
@@ -36,7 +36,7 @@
               <label for='email'>Email (optional)</label>
             </td>
             <td>
-              <input type='email' name='emailaddress' value='{{email}}'>
+              <input type='text' name='emailaddress' value='{{email}}'>
               <span class='error'></span>
             </td>
           </tr>
